@@ -1,0 +1,45 @@
+{
+  "name": "realtime-chat-app",
+  "version": "1.0.0",
+  "description": "A modern real-time chat application with authentication, private messaging, file uploads, and notifications",
+  "main": "server/index.js",
+  "scripts": {
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "test": "cd server && npm test && cd ../client && npm test",
+    "clean": "rm -rf node_modules server/node_modules client/node_modules server/uploads/*"
+  },
+  "keywords": [
+    "chat",
+    "realtime",
+    "socket.io",
+    "react",
+    "nodejs",
+    "express",
+    "authentication",
+    "messaging",
+    "file-upload",
+    "notifications"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/realtime-chat-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/realtime-chat-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/realtime-chat-app#readme"
+}
